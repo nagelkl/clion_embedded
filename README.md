@@ -1,2 +1,2 @@
 # clion_embedded
-Embedded Development ont STM32 with CLion and the Segger Tools
+Embedded Development on STM32 with CLion and the Segger Tools
