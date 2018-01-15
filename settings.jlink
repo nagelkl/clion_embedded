@@ -1,0 +1,1 @@
+-select USB -device STM32L476RG -if SWD -speed 1000 -ir
