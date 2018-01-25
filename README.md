@@ -9,13 +9,13 @@ some sort of JTAG- Probe. This demo project is heavily based on the Blog Post of
 on the CLion blog.
 
 ## Prerequisites
-There have to be some dependencies to be satisfied to build and run the Demo.
+There are some dependencies that have to be satisfied to build and run the demo.
 
 In this demo we assume running all our tools on a Windows host.
 
 ### MINGW
-On Windows hosts, CMake expects MINGW running on the host to have the make utility available
-Install a minimal MINGW Environment acoording to [this](http://www.mingw.org/wiki/Getting_Started) description.
+On Windows hosts, CMake expects MINGW running on the host to have the make utility available.
+Install a minimal MINGW Environment according to [this](http://www.mingw.org/wiki/Getting_Started) description.
 
 After installation, test the MINGW environment by typing
     
@@ -28,13 +28,15 @@ There should be a result similar to
     mingw32-make: *** No targets specified and no makefile found.  Stop.
 
 ### CLion IDE
-Download and install the CLioin IDE from [Jetbrains](https://www.jetbrains.com/clion/)
-There ist a free 30 Day evaluation licence available
+Download and install the CLioin IDE from [Jetbrains](https://www.jetbrains.com/clion/).
+There ist a free 30 Day evaluation licence available.
 
-### A Cross- gcc- toolchain for ARM
-A gcc based cross- tool- chain for ARM Microcontrolers can be obtained free of charge directly from [ARM](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads).
-Install the Toolchain suitable for your plattform
-After installing, check if the tools are available on your PATH: Open a termianl and type
+### Cross- gcc- toolchain for ARM
+A gcc based cross- tool- chain for ARM microcontrolers can be obtained free of charge directly from [ARM](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads).
+
+Install the Toolchain suitable for your platform.
+
+After installing, check if the tools are available on your PATH: Open a terminal and type
 
     C:\Users\nagelkl>arm-none-eabi-gcc
 
@@ -43,16 +45,16 @@ There should be some response like
     arm-none-eabi-gcc: fatal error: no input files
     compilation terminated.
     
-If this is not the case, you have to have to append the _bin_ directory of the toolchain to your PATH and test again
+If this is not the case, you have to append the _bin_ directory of the toolchain to your PATH and test again.
 
 ### The Segger jlink-gdbserver
 The JLink gdb-server ist part of the Software- Tools from Segger. Download and install the latest version from 
-[here](https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack)
+[here](https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack).
 
 ### A STM nucleo- board with reflashed debugger firmware
 You need a STM nucleo Board from STM. To be used with the Segger JLink- Tools, the firmware on the debug- part of the
 nucleo- board has to be changed according to [this](https://www.segger.com/products/debug-probes/j-link/models/other-j-links/st-link-on-board/) description.
 
-After the firmware change, the debug- part of the nucleo behaves like a SEGGER J-Link debug probe
+After the firmware change, the debug- part of the nucleo behaves like a SEGGER J-Link debug probe.
 
 
