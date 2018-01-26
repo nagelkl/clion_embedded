@@ -2,6 +2,12 @@
 <project version="4">
   <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
   <component name="CidrRootsConfiguration">
+    <sourceRoots>
+      <file path="$PROJECT_DIR$/Drivers/CMSIS/Device" />
+      <file path="$PROJECT_DIR$/Drivers/CMSIS/Include" />
+      <file path="$PROJECT_DIR$/Drivers/STM32L4xx_HAL_Driver/Inc" />
+      <file path="$PROJECT_DIR$/Inc" />
+    </sourceRoots>
     <excludeRoots>
       <file path="$PROJECT_DIR$/build" />
     </excludeRoots>
