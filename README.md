@@ -57,4 +57,48 @@ nucleo- board has to be changed according to [this](https://www.segger.com/produ
 
 After the firmware change, the debug- part of the nucleo behaves like a SEGGER J-Link debug probe.
 
+## Starting the JLink gdbserver
+To start the Jlink gdbserver we have to open a terminal in the project root and execute the StartupJlink.bat script. 
+This starts the Jlink gdbserver in CLI- Mode (without GUI) configured for the microcontroller on the nucleo board and
+connects to the microcontroller core.
+If everything is fine you should see an output similar to
+
+    SEGGER J-Link GDB Server V6.12d Command Line Version
+    
+    JLinkARM.dll V6.12d (DLL compiled Dec 21 2016 16:56:08)
+    
+    -----GDB Server start settings-----
+    GDBInit file:                  none
+    GDB Server Listening port:     2331
+    SWO raw output listening port: 2332
+    Terminal I/O port:             2333
+    Accept remote connection:      localhost only
+    Generate logfile:              off
+    Verify download:               off
+    Init regs on start:            on
+    Silent mode:                   off
+    Single run mode:               off
+    Target connection timeout:     0 ms
+    ------J-Link related settings------
+    J-Link Host interface:         USB
+    J-Link script:                 none
+    J-Link settings file:          none
+    ------Target related settings------
+    Target device:                 STM32L476RG
+    Target interface:              SWD
+    Target interface speed:        1000kHz
+    Target endian:                 little
+    
+    Connecting to J-Link...
+    J-Link is connected.
+    Firmware: J-Link STLink V21 compiled Dec 21 2016 15:10:59
+    Hardware: V1.00
+    S/N: 770548980
+    Checking target voltage...
+    Target voltage: 3.30 V
+    Listening on TCP/IP port 2331
+    Connecting to target...Connected to target
+    Waiting for GDB connection...
+
+This shows you the gdbserver is ready to accept connections on port 2331.
 
