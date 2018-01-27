@@ -58,7 +58,7 @@ nucleo- board has to be changed according to [this](https://www.segger.com/produ
 After the firmware change, the debug- part of the nucleo behaves like a SEGGER J-Link debug probe.
 
 ## Starting the JLink gdbserver
-To start the Jlink gdbserver we have to open a terminal in the project root and execute the StartupJlink.bat script. 
+To start the Jlink gdbserver we have to open a terminal in the project root and execute the [StartupJlink.bat](StartupJlink.bat) script. 
 This starts the Jlink gdbserver in CLI- Mode (without GUI) configured for the microcontroller on the nucleo board and
 connects to the microcontroller core.
 If everything is fine you should see an output similar to
