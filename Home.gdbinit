@@ -1,16 +1,17 @@
 # Init File for setting up the gdb when started from within the CLion GDB- Server configuration
-# In the gdbserver configuration of CLion the default gdb has to be selected, then the gdb is started in the root of
-# the project and loads this file
+# FIXME This file has to be copied to the %HOMEPATH% as .gdbinit, CLiond gdbserver does not load the .gdbinit in the project root
 # Since the CLion gdbserver setup issues the target remote command during startup we have to use gdb hooks to force a
 # download of the binary after the remote connection is established
-echo Init- File Loaded!!
+
+set verbose on
+echo Init- File Loaded!!\n
 
 # hookpost-remote gets called after the target remote command has successful finished.
+# we force a download of the binary, do a reset and halt on the target and set an initial breakpoint in main
 define target hookpost-remote
-set verbose on
-file cmake-build-debug/clion_embedded.elf
+echo Hook post- remote called!!\n
 load
 monitor reset
+monitor halt
 b main
 end
-

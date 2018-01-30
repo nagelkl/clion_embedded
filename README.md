@@ -106,6 +106,10 @@ This shows you the gdbserver is ready to accept connections on port 2331.
 In Clion configure a new Run / Debug configuration:
 ![alt text](Doc/gdbserver_settings.png)
 
-Choose the symbol file according to where your project is located. It is important to use the _Default_ gdb (shipped 
-with CLion), because then the gdb is executed in the project root and reads the [.gdbinit file](.gdbinit), which 
-forces a download of the binary file to the target.
+Choose the symbol file according to where your project is located. 
+
+__At the time of this writing the CLion gdbserver configuration does not read the .gdbinit file from the project root,
+instead it reads it from %HOMEPATH%. Therefore the file [Home.gdbinit](Home.gdbinit) has to be copied to %HOMEPATH% as 
+.gdbinit. This is also accomplished by the [StartupJLink.bat](StartupJLink.bat) script.__
+
+The .gdbinit file forces a download of the binary file to the target.
