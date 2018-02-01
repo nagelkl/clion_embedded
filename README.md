@@ -109,7 +109,14 @@ In Clion configure a new Run / Debug configuration:
 Choose the symbol file according to where your project is located. 
 
 __At the time of this writing the CLion gdbserver configuration does not read the .gdbinit file from the project root,
-instead it reads it from %HOMEPATH%. Therefore the file [Home.gdbinit](Home.gdbinit) has to be copied to %HOMEPATH% as 
-.gdbinit. This is also accomplished by the [StartupJLink.bat](StartupJLink.bat) script.__
+instead it reads it from %HOMEPATH%. The script [setup_gdbinit.bat](setup_gdbinit.bat) generates the necessary .gdbinit
+ file in %HOMEPATH%__
 
-The .gdbinit file forces a download of the binary file to the target.
+The generated .gdbinit file forces a download of the binary file to the target. To make sure the right .gdbinit is present
+the setup_gdbinit.bat script has to be run. 
+
+This can be accomplished by setting the script as external tool for CLion: 
+![alt text](Doc/external_tool.png)
+
+and running this tool as external tool in the debug- configuration:
+![alt_text](Doc/dbugger_config.png) 
