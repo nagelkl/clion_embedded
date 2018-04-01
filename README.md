@@ -34,7 +34,7 @@ There ist a free 30 Day evaluation licence available.
 ### Cross- gcc- toolchain for ARM
 A gcc based cross- tool- chain for ARM microcontrolers can be obtained free of charge directly from [ARM](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads).
 
-Install the Toolchain suitable for your platform.
+Install the Toolchain for the windows host.
 
 After installing, check if the tools are available on your PATH: Open a terminal and type
 
