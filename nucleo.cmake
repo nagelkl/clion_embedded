@@ -3,14 +3,14 @@
 SET(CMAKE_SYSTEM_NAME Generic)
 SET(CMAKE_SYSTEM_VERSION 1)
 
-# Supress Error when trying to test the compiler
+# Suppress Error when trying to test the compiler
 SET(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
 # specify the cross compiler
 set (CMAKE_C_COMPILER arm-none-eabi-gcc)
 set (CMAKE_CXX_COMPILER arm-none-eabi-g++)
 
-# The settings in this file are based on the Makefile that CubeMX automaticaly generates
+# The settings in this file are based on the Makefile that CubeMX automatically generates
 
 #optimization
 set (OPT "-Og")
