@@ -19,7 +19,7 @@ Install a minimal MINGW Environment according to [this](http://www.mingw.org/wik
 
 After installation, test the MINGW environment by typing
     
-    C:\Users\nagelkl>mingw32-make
+    mingw32-make
     
 in a terminal.
 
@@ -38,7 +38,7 @@ Install the Toolchain for the windows host.
 
 After installing, check if the tools are available on your PATH: Open a terminal and type
 
-    C:\Users\nagelkl>arm-none-eabi-gcc
+    arm-none-eabi-gcc
 
 There should be some response like
 
@@ -57,9 +57,15 @@ nucleo- board has to be changed according to [this](https://www.segger.com/produ
 
 After the firmware change, the debug- part of the nucleo behaves like a SEGGER J-Link debug probe.
 
-## Starting the JLink gdbserver
-To start the Jlink gdbserver we have to open a terminal in the project root and execute the [StartupJLink.bat](StartupJLink.bat) script. 
-This starts the Jlink gdbserver in CLI- Mode (without GUI) configured for the microcontroller on the nucleo board and
+## Testing the JLink gdbserver
+To test the Jlink gdbserver we have to open a terminal and run the SEGGER J-Ling gdbserver in cli- Mode configured for
+our microcontroller. 
+
+If the SEGGER tools are installed at the default location, 
+
+    "C:\Program Files (x86)\SEGGER\JLink\JLinkGDBServerCL.exe" -select USB -device STM32L476RG -if SWD -speed 1000 -ir 
+
+starts the Jlink gdbserver in CLI- Mode (without GUI) configured for the microcontroller on the nucleo board and
 connects to the microcontroller core.
 If everything is fine you should see an output similar to
 
@@ -102,21 +108,9 @@ If everything is fine you should see an output similar to
 
 This shows you the gdbserver is ready to accept connections on port 2331.
 
-## Configunring the debugger for working with the gdbserver
-In Clion configure a new Run / Debug configuration:
-![alt text](Doc/gdbserver_settings.png)
+## Configuring the debugger for working with the gdbserver
+In Clion configure a new Embedded GDBServer Run / Debug configuration:
+![alt text](Doc/debugger_config.png)
 
-Choose the symbol file according to where your project is located. 
-
-__At the time of this writing the CLion gdbserver configuration does not read the .gdbinit file from the project root,
-instead it reads it from %HOMEPATH%. The script [setup_gdbinit.bat](setup_gdbinit.bat) generates the necessary .gdbinit
- file in %HOMEPATH%__
-
-The generated .gdbinit file forces a download of the binary file to the target. To make sure the right .gdbinit is present
-the setup_gdbinit.bat script has to be run. 
-
-This can be accomplished by setting the script as external tool for CLion: 
-![alt text](Doc/external_tool.png)
-
-and running this tool as external tool in the debug- configuration:
-![alt_text](Doc/dbugger_config.png) 
+This Run- Configuration- Type supports a Build- Step before the debugging session so you can build and debug with a 
+single SHIFT F9 Keystroke.

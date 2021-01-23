@@ -1,7 +1,7 @@
 /*
  * Application main entry point
  *
- * Insipred by the ARDUINO environment.
+ * Inspired by the ARDUINO environment.
  *
  * application_init gets called once at the start of the application, application_run gets called in a cyclic fashion
  * like it would be run on an arduino
