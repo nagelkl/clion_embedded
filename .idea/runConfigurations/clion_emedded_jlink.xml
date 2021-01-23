@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="clion_emedded_jlink" type="CLion_Remote" remoteCommand="localhost:2331" symbolFile="$PROJECT_DIR$/cmake-build-debug/clion_embedded.elf" sysroot="">
+    <method v="2">
+      <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_External Tools_copy_gdbinit" />
+    </method>
+  </configuration>
+</component>
