@@ -10,6 +10,7 @@
  */
 
 #include "stm32l4xx_hal.h"
+#include "main.h"
 #include "Application.h"
 
 /**
