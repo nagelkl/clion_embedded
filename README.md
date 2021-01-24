@@ -126,3 +126,16 @@ This tells CLion to use the .gdbinit- file in the project root.
 
 As an example this project contains a .gdbinit file setting a breakpoint at main() when the executable was loaded 
 onto the target.
+
+## Debugging support for peripherals
+The debugger component in CLion can show the peripheral registers of the microcontroller when provided an appropriate
+*.svd file describing the peripherals. The description files can be found on the website of the chip vendors, in our
+case [STMicroelectronics](https://www.st.com/en/microcontrollers-microprocessors/stm32l4x6.html#cad-resources)
+
+The microcontroller on our demo board is from the STM32L4x6 family so the STM32L4x6.svd file is necessary. After 
+adding this file to the project root and configuring it in the _Peripherals_ Tab on the debugger view, the actual state 
+of the microcontroller peripherals can be examined.
+![alt text](Doc/peripherals.png)
+
+
+
