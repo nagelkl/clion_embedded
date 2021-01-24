@@ -114,3 +114,15 @@ In Clion configure a new Embedded GDBServer Run / Debug configuration:
 
 This Run- Configuration- Type supports a Build- Step before the debugging session so you can build and debug with a 
 single SHIFT F9 Keystroke.
+
+## Configuring the debugging sessiont with a .gdbinit file
+By default gdb loads the .gdbinit from _%HOMEPATH%_. To change this behaviour there has to be a .gdbinit with the 
+following content in _%HOMEPATH%_: 
+
+    set auto-load local-gdbinit on
+    add-auto-load-safe-path /
+
+This tells CLion to use the .gdbinit- file in the project root. 
+
+As an example this project contains a .gdbinit file setting a breakpoint at main() when the executable was loaded 
+onto the target.
