@@ -15,7 +15,7 @@ In this demo we assume running all our tools on a Windows host.
 
 ### MINGW
 On Windows hosts, CMake expects MINGW running on the host to have the make utility available.
-Install a minimal MINGW Environment according to [this](http://www.mingw.org/wiki/Getting_Started) description.
+Install a minimal MINGW Environment from [this](https://www.mingw-w64.org/) location.
 
 After installation, test the MINGW environment by typing
     
